@@ -5,53 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11-1~3</title>
 
+    <link rel="stylesheet" href="/reset.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        header {
+          display: flex;
+          border: 1px solid #222;
+
+          max-width: 1000px;
+          margin: 0 auto;
+
+          height: 100px;
+          box-sizing: border-box;
+
+          display: flex;
+          justify-content: space-between;
+
+          margin-bottom: 12px;
         }
 
-        .header-container {
+        h1 {
+            background-color: yellow;
+            width: 200px;
+
+            font-size: 32px;
+            font-weight: bold;
+
             display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            background-color: antiquewhite;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .menu-container {
+            display: flex;
+            background-color: orange;
+        }
+
+        .menu-container a {
+            display: block;
+            padding: 4px 12px;
+            color: #222;
+            text-decoration: none;
+        }
+
+        .menu-container:first-child {
             background-color: yellow;
         }
 
-        header {
-            width: 100px;
-            height: 25%;
+        .wrap {
+            max-width: 1000px;
             margin: 0 auto;
-            padding-top: 10px;
-            border: 2px solid black;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-        .menu-container {
 
-        }
+            display: flex;
 
-        .main {
+            gap: 12px;
 
+            align-items: flex-start;
+
+            margin-bottom: 12px;
         }
 
-        .section-container {
-
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .text {
+        article {
+            border: 1px solid #222;
+            width: 640px;
+            padding: 16px;
+        }
 
+        .wrap h2{
+            font-size: 24px;
+            font-weight: bold;
+            padding: 4px;
+            margin-bottom: 8px;
+        }
+
+        article > h2 {
+            background-color: antiquewhite;
+        }
+
+        .wrap p {
+            line-height: 150%;
+        }
+       
+        aside {
+            border: 1px solid #222;
+            padding: 16px;
         }
 
         .aside-inner-box {
-
+            background-color: gray;
+            margin-top: 12px;
+            
+        }
+        .aside-inner-box > h3 {
+            font-size: 24px;
+            font-weight: bold;
         }
 
-        .footer-container {
-            
+        footer {
+            max-width: 1000px;
+            border: 1px solid #222;
+            box-sizing: border-box;
+            margin: 0 auto;
+
+            text-align: center;
+            padding: 12px;
+
+            background-color: antiquewhite;
         }
     </style>
 </head>
 <body>
-    <div class="header-container">
     <header>
         <h1>WEB-logo</h1>
         <nav>
@@ -69,34 +145,33 @@
             </ul>
         </nav>
     </header>
-</div>
-    <div id="main">
-    <main></main>
-</div>
-    <section class="section-container">
-        <article>
-            <h2> Main Article
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio sint qui autem maiores quae illum blanditiis architecto libero impedit ea, fugit adipisci ab laborum itaque iure consequuntur iste suscipit atque?</p>
-            </h2>
-            <h2> Main Article
-                <p>Reprehenderit, quaerat quasi. Voluptatem, nobis aliquam reiciendis maxime cupiditate, dignissimos, eos dolores inventore harum doloremque tenetur incidunt deleniti! Est necessitatibus esse nostrum fuga mollitia sint eum aliquid commodi perspiciatis autem.</p>
-            </h2>
-            <h2> Main Article
-                <p>Molestiae quia vitae quo rem consectetur quidem laboriosam iusto id pariatur expedita inventore error fugit accusantium atque labore, vero dolores sed esse veritatis eos. Nesciunt magnam consequuntur sequi vero error!</p>
-            </h2>
-        </article>
+    <div class="wrap">
+        <main>
+            <article>
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatum unde quis, neque error dolorem laborum saepe distinctio. Est nobis ut dignissimos harum excepturi corrupti. Doloribus eveniet ad iure minus?</p>
+            </article>
+            <article>
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui cupiditate quia, consequuntur necessitatibus fugit aliquid suscipit! Iste accusamus eius voluptas sequi molestias provident libero ipsam eos, ab laborum quia?</p>
+            </article>
+            <article>
+                <h2>Main Article</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui cupiditate quia, consequuntur necessitatibus fugit aliquid suscipit! Iste accusamus eius voluptas sequi molestias provident libero ipsam eos, ab laborum quia?</p>
+            </article>
+        </main>
         <aside>
             <h2>Right aside</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, dicta accusamus sed alias voluptatibus quae sunt veniam expedita! Sequi doloremque repellendus labore, eos ipsum aut temporibus necessitatibus voluptatem architecto tempora!</p>
-           <input type="text" name="" id="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto modi labore aperiam, praesentium provident tempora repellendus temporibus enim, minus explicabo cupiditate esse illo. Numquam nihil rerum eligendi iste quis?</p>
+            <input type="text" name="" id="">
             <button>mailto</button>
             <div class="aside-inner-box">
-                <h2>TEXT</h2>
+                <h3>TEXT</h3>
                 <p>banner</p>
             </div>
         </aside>
-    </section>
-    <footer class="footer-container">
+    </div>
+    <footer>
         &copy;HTML5 COPYRIGHT
     </footer>
 </body>
