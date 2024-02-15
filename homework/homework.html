@@ -7,22 +7,17 @@
 
     <link rel="stylesheet" href="homework.css">
 
-    <style>
-    table {
-        
-    }
-    td, th {
-        width: 75px;
-        height: 25px;
-        border: 1px solid #222;
-        text-align: center;
-        font-size: 8px;
-        font-weight: bold;
-    }
-    </style>
 </head>
 <body>
     <table>
+        <colgroup>
+            <col style="width: 300px;">
+            <col>
+            <col style="background-color: pink;">
+            <col>
+            <col span="2" style="background-color: gray;">
+            <col>///
+        </colgroup>
         <tr>
             <th colspan="2"rowspan="2">구분</th>
             <th rowspan="2">운영시간</th>
