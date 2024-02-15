@@ -1,5 +1,10 @@
 table {
-    border-spacing: 0;
+    /* border-spacing: 0; */
+    /* 테두리 사이의 간격을 없애주긴 하지만, 테두리가 의도한 굵기의 두배가 되어버리는 문제가 있다. */
+
+    border-collapse: collapse;
+    /* separate(기본값) : 분리된 */
+    /* collapse : 붕괴되다 (여백이) */
 }
 td,th {
     width: 150px;
@@ -7,10 +12,14 @@ td,th {
     border: 1px solid #AAA;
     text-align: center;
     font-size: 16px;
-    font-weight: bold;
+
+    /* 테이블에서만 쓸수 있는 속성 */
+    vertical-align: bottom;
+    /* 그 와의 경우에 텍스트를 박스 기준 정렬 하고 싶다면 */
+    /* flex 속성을 활욯할 수 있습니다. */
 }
 
 th {
     font-weight: bold;
-    background-color: #elc2fd;
+    background-color: #e1c2fd;
 }
