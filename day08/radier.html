@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radier</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+
+            position: relative;
+        }
+
+        .animaition-container {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: 0%;
+            transform-style: preserve-3d;
+
+            width: 200px;
+            height: 200px;
+        }
+
+        .radier {
+            width: 100%;
+            height: 100%;
+
+            background-color: white;
+            border-radius: 50%;
+            transform-origin: 100%;
+
+            animation: radier 1s infinite;
+        }
+
+        @keyframes radier {
+            from {
+               opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 세개의 원이 겹쳐있고 -->
+    <!-- 시작할때는 크기가 작고, 불투명한상태 -->
+    <!-- 도착할때는 크기가 크고 투명한상태 -->
+    <!-- 투명한 정도 0 ~ 100 -->
+
+    <div class="container">
+        <div class="animaition-container">
+            <div class="radier"></div>
+        </div>
+    </div>
+</body>
+</html>
